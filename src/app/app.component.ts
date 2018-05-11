@@ -30,7 +30,7 @@ export class MyApp {
       { title: 'Calendar', component: CalendarPage },
       { title: 'Services', component: ServicesPage },
       { title: 'Channels', component: ChannelsPage },
-      { title: 'Contact Us' componet: ContactPage}
+      { title: 'Contact Us', component: ContactPage}
     ];
 
   }
