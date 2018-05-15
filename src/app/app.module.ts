@@ -10,6 +10,17 @@ import { ServicesPage } from '../pages/services/services';
 import { ContactPage } from '../pages/contact/contact';
 import { ChannelsPage } from '../pages/channels/channels';
 
+/***** SHOWS LIST *****/
+import { EcradioPage } from '../pages/ecradio/ecradio';
+import { ThedlinePage } from '../pages/thedline/thedline';
+import { ThebaselinePage } from '../pages/thebaseline/thebaseline';
+import { BacktalkPage } from '../pages/backtalk/backtalk';
+import { DisruptionspecialsPage} from '../pages/disruptionspecials/disruptionspecials';
+import { EasebeatsandbizzPage } from '../pages/easebeatsandbizz/easebeatsandbizz';
+import { ZeescompanyPage } from '../pages/zeescompany/zeescompany';
+import { HomefreePage } from '../pages/homefree/homefree';
+import { WrestlefandomradioPage } from '../pages/wrestlefandomradio/wrestlefandomradio';
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -21,7 +32,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     CalendarPage,
     ServicesPage,
     ContactPage,
-    ChannelsPage
+    ChannelsPage,
+    EcradioPage,
+    ThedlinePage,
+    BacktalkPage,
+    ThebaselinePage,
+    DisruptionspecialsPage,
+    EasebeatsandbizzPage,
+    ZeescompanyPage,
+    HomefreePage,
+    WrestlefandomradioPage
+
   ],
   imports: [
     BrowserModule,
@@ -35,7 +56,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     CalendarPage,
     ServicesPage,
     ContactPage,
-    ChannelsPage
+    ChannelsPage,
+    EcradioPage,
+    ThedlinePage,
+    BacktalkPage,
+    ThebaselinePage,
+    DisruptionspecialsPage,
+    EasebeatsandbizzPage,
+    ZeescompanyPage,
+    HomefreePage,
+    WrestlefandomradioPage
   ],
   providers: [
     StatusBar,
