@@ -14,9 +14,4 @@ export class HomePage {
 
   }
 
-  openEcradio() {
-    this.navCtrl.push('EcradioPage');
-  }
- 
-
 }
