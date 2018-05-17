@@ -23,6 +23,8 @@ import { WrestlefandomradioPage } from '../pages/wrestlefandomradio/wrestlefando
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { EcradioPageModule } from '../pages/ecradio/ecradio.module';
+import { YtProvider } from '../providers/yt/yt';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -70,7 +73,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    YtProvider
   ]
 })
 export class AppModule {}
