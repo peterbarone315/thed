@@ -1,6 +1,16 @@
 {
   "name": "TheD",
   "app_id": "f11865b9",
+
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://cors.api.com/api"
+    }
+  ],
+
+
+
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
