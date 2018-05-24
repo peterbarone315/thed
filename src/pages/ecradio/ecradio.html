@@ -36,7 +36,15 @@
     <div [ngSwitch]="cat">
       <ion-list *ngSwitchCase="'podcasts'">
         <ion-item *ngFor="let Ecpodcast of Ecpodcasts">
+            <img src="{{Ecpodcast.images.thumb}}">
           <h2>{{Ecpodcast.title}}</h2>
+          <p>{{Ecpodcast.description}}</p>
+          <audio controls>
+              <source src="{{Ecpodcast.audio_url}}" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          
+
         </ion-item>
       </ion-list>
     </div>
