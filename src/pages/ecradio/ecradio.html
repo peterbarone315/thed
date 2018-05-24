@@ -1,23 +1,44 @@
 <ion-header>
-    <ion-navbar>
-      <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-      <ion-title>EC RADIO</ion-title>
-    </ion-navbar>
-  </ion-header>
-  
-  <ion-content padding>
-    <h3>EC RADIO</h3>
-      
-       <ion-segment>
-        <ion-segment-button value="videos">
-          Videos
-        </ion-segment-button>
-        <ion-segment-button value="podcasts">
-          Podcasts
-        </ion-segment-button>
-      </ion-segment>
-    
-      
-  </ion-content>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>EC RADIO</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-segment [(ngModel)]="cat">
+    <ion-segment-button value="home">
+      EC Radio
+    </ion-segment-button>
+    <ion-segment-button value="videos">
+      Videos
+    </ion-segment-button>
+    <ion-segment-button value="podcasts">
+      Podcasts
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="cat">
+    <ion-list *ngSwitchCase="'home'">
+      <p>home page info for ecradio</p>
+    </ion-list>
+  </div>
+
+    <div [ngSwitch]="cat">
+        <ion-list *ngSwitchCase="'videos'">
+          <p>show youtube videos</p>
+        </ion-list>
+    </div>
+
+    <div [ngSwitch]="cat">
+      <ion-list *ngSwitchCase="'podcasts'">
+        <ion-item *ngFor="let Ecpodcast of Ecpodcasts">
+          <h2>{{Ecpodcast.title}}</h2>
+        </ion-item>
+      </ion-list>
+    </div>
+
+</ion-content>
