@@ -5,9 +5,6 @@
     </button>
     <ion-title>EC RADIO</ion-title>
   </ion-navbar>
-</ion-header>
-
-<ion-content padding>
 
   <ion-segment [(ngModel)]="cat">
     <ion-segment-button value="home">
@@ -21,6 +18,11 @@
     </ion-segment-button>
   </ion-segment>
 
+</ion-header>
+
+<ion-content padding>
+
+
   <div [ngSwitch]="cat">
     <ion-list *ngSwitchCase="'home'">
       <p>home page info for ecradio</p>
@@ -28,15 +30,24 @@
   </div>
 
     <div [ngSwitch]="cat">
-        <ion-list *ngSwitchCase="'videos'">
-          <p>show youtube videos</p>
+      <ion-list *ngSwitchCase="'videos'"> 
+          <ion-item *ngFor="let item of Ecvideos.items"> 
+            
+            <ion-thumbnail item-start>
+            <img src="{{item.snippet.thumbnails.default.url}}">
+            </ion-thumbnail>
+             <h2>{{item.snippet.title}}</h2>
+            <p text-justify>{{item.snippet.description}}</p>
+            <h2>{{item.snippet.resourceId.videoId}}</h2>
+            
+          </ion-item>
         </ion-list>
     </div>
 
     <div [ngSwitch]="cat">
       <ion-list *ngSwitchCase="'podcasts'">
         <ion-item *ngFor="let Ecpodcast of Ecpodcasts">
-            <img src="{{Ecpodcast.images.thumb}}">
+          <ion-thumbnail item-start><img src="{{Ecpodcast.images.thumb}}"></ion-thumbnail>
           <h2>{{Ecpodcast.title}}</h2>
           <p>{{Ecpodcast.description}}</p>
           <audio controls>
