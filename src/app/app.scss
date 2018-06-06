@@ -24,3 +24,52 @@
     justify-content: center;
     background: #fff;
 }
+
+h1,h2,h3,h4,h5,h6{
+    color: map-get($colors, primary);
+}
+
+.showBtn {
+    display:block;
+    background: transparent;
+  }
+
+.toolbar-title.toolbar-title-sm, 
+.toolbar-title.toolbar-title-md, 
+.toolbar-title.toolbar-title-ios, 
+.toolbar-title.toolbar-title-wp { color: map-get($colors, primary); }
+
+.bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+    color: map-get($colors, primary);
+    background-color: transparent;
+}
+
+.bar-button-default-ios, .bar-button-default.bar-button-ios-default, .bar-button-clear-ios-default {
+color: map-get($colors, primary);
+background-color: transparent;
+}
+
+.list-ios > .item-block:first-child {
+border-top: 0.55px solid map-get($colors, primary);
+}
+
+.item-ios {
+padding-left: 16px;
+position: relative;
+font-size: 1.7rem;
+color: solid map-get($colors, primary);
+background-color: rgb(36, 36, 36);
+border-radius: 0px;
+transition: background-color 200ms linear;
+}
+
+.list-ios .item-block .item-inner {
+    border-bottom: 0.55px solid map-get($colors, primary);
+  }
+
+  .list-md .item-block .item-inner {
+    border-bottom: 0.55px solid map-get($colors, primary);
+  }
+
+.item { color: map-get($colors, primary); }
+ .item-inner{ border-bottom: 1px solid map-get($colors, primary); }
